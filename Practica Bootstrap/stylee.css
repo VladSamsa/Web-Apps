@@ -1,0 +1,7 @@
+body{
+    background-color: antiquewhite;
+}
+.col,
+.col-7{
+    border: 1px black solid;
+}
