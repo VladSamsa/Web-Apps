@@ -1,0 +1,33 @@
+version: '3.8'
+services:
+  mariadb:
+    image: mariadb:jammy
+    restart: always
+    environment:
+      MYSQL_USER: MrSamsa
+      MYSQL_PASSWORD: 1234
+      MYSQL_ROOT_PASSWORD: root-secret-password
+      MYSQL_DATABASE: Students
+    volumes:
+      - school-volume:/var/lib/mysql
+    networks:
+      - VldNetwork
+
+  phpmyadmin:
+    image: phpmyadmin:5.2.1-apache
+    restart: always
+    environment:
+      PMA_ARBITRARY: '1'
+    ports:
+      - 8082:80
+    networks:
+      - VldNetwork
+    depends_on:
+      - mariadb
+
+networks:
+  VldNetwork:
+
+volumes:
+  school-volume:
+    external: true
