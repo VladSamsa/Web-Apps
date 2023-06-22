@@ -1,0 +1,28 @@
+.titulo{
+    color:  white;
+    overflow: hidden;
+    margin-left: 300px;
+    font-size: 200%;
+    position: relative;
+    top: 100px;
+}
+.boton{
+    width: 400px;
+    height: 30px;
+    background-color: rgb(63, 63, 63);
+    border-radius: 50px;
+    align-items: center;
+    position: relative; /Mantiene la posicion en la que se encuentra reservada, lo que permite desplazarlo como gustes/
+    top: 100px; /Mover el rectangulo hacia abajo/
+    display: flex; /Crea el contenedor flexible/
+    justify-content: center; /Para centrarlo en medio/
+    margin-left: 300px;
+}
+.nombre{
+    color:  white;
+    overflow: hidden;
+    margin-left: 300px;
+    font-size: 200%;
+    position: relative;
+    top: 100px;
+}
